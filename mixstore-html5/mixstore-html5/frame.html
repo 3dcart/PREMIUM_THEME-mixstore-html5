@@ -1,0 +1,646 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+<title>[TITLE]</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+[META]
+<script type="text/javascript" src="/assets/templates/common-html5/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/templates/mixstore-html5/js/instafeed.min.js"></script>
+<script type="text/javascript" src="assets/templates/common-html5/js/modernizr.min.js"></script>
+<script type="text/javascript" src="assets/templates/common-html5/js/utilities.js"></script>
+<link rel="stylesheet" href="assets/templates/common-html5/quicksearch/quicksearch.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="assets/templates/[template]/css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="assets/templates/[template]/css/owl.carousel.css" type="text/css" media="all" />
+<link rel="stylesheet" href="assets/templates/[template]/css/owl.theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="assets/templates/[template]/css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="assets/templates/[template]/css/layout.css" type="text/css" media="all" />
+<link rel="stylesheet" href="assets/templates/[template]/css/[stylesheet]" type="text/css" media="screen" />
+<link rel="stylesheet" href="assets/templates/[template]/css/responsive.css" type="text/css" media="screen" />
+<link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+<link rel="stylesheet" href="assets/templates/[template]/css/font_icon.css" />
+<!--[if IE 7]>
+<link rel="stylesheet" href="assets/templates/common-html5/css/fontello-ie7.css" />
+<![endif]-->
+<!--START: FRAME_RSSFEEDS -->
+<link rel="alternate" type="application/rss+xml" title="Featured Items (RSS 2.0)" href="[store_url]/rss.asp?type=home" />
+<link rel="alternate" type="application/rss+xml" title="Products On Sale (RSS 2.0)" href="[store_url]/rss.asp?type=onsale" />
+<link rel="alternate" type="application/rss+xml" title="New Releases (RSS 2.0)" href="[store_url]/rss.asp?type=newreleases" />
+<link rel="alternate" type="application/rss+xml" title="Best Sellers (RSS 2.0)" href="[store_url]/rss.asp?type=bestsellers" />
+<link rel="alternate" type="application/rss+xml" title="Latest Blog Posts (RSS 2.0)" href="[store_url]/rss.asp?type=blog" />
+<!--END: FRAME_RSSFEEDS -->
+<script type="text/javascript">
+    if (typeof jQuery == 'undefined') {
+        document.write("");
+    }
+</script>
+<script type="text/javascript">
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+    }
+    if ( inIframe() ) {
+        document.write("<script type=\"text/javascript\" src=\"/assets/templates/[template]/js/iframeResizer.contentWindow.min.js?vcart=7.2.4\"></" + "script>");
+    }
+</script>
+</head><body class="keep-header">
+<div id="mainContainer">  
+  <header>
+      <div class="top-menu">
+        <div class="container">
+          <div class="topbar-left">
+            <a id="mobileMenu" class="show-mobile"><i class="icon-m icon-ellipsis-vert"></i></a>
+            <a href="view_cart.asp" id="mobileCart" class="show-mobile"><i class="icon-m icon-basket"></i></a>
+            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="showSlideMenu">
+              <a id="closeSlideMenu" class="show-mobile"><i class="icon-m icon-cancel-circled"></i></a>
+              <!--START: FRAME_MENU-->
+              <ul>
+                <li class="m-search show-mobile">
+                    <div>
+                      <form method="get" name="mSearchForm" action="search.asp">
+                        <input type="text" name="keyword" value="" placeholder="[frame_search]" />
+                        <button name="search"><i class="icon-m icon-search"></i></button>
+                        <div class="clear"></div>
+                      </form>
+                    </div>
+                </li>                
+                <!--START: menuitems_view--> 
+                <!--START: TOP_LINK_FORMAT-->
+                    <li><a href="infopage.asp?page=[link_id]" class="menu" target="[link_target]">[link_name]</a></li>
+                <!--END: TOP_LINK_FORMAT--> 
+                <!--END: menuitems_view-->                
+              </ul>
+              <!--END: FRAME_MENU-->
+              <div class="clear"></div>
+              </nav>            
+            </div>
+            <div class="topbar-right hidden-sm hidden-xs">
+                <span><i class="fa fa-truck" aria-hidden="true"></i> Free shipping</span> on every order over $ 150
+            </div>
+        </div>
+      </div>
+      <div class="main-menu">
+        <div class="container">
+          <div class="header-left">
+            <div id="logo"><!--START: global_header-->
+              <h1 class="store-name">[storename]</h1>
+              <h3 class="store-slogan">[storeslogan]</h3>
+              <!--END: global_header-->
+            </div>
+          </div>
+          <div class="header-right">
+            <nav id="catNavMenu">    
+            <!--START: FRAME_CATEGORY-->
+            <ul id="desktopMenu">
+              <!--START: CATEGORIES-->
+              <li>
+                <!--START: CATEGORY_FORMAT-->
+                <a href="view_category.asp?cat=CATID" class="cat">CATEGORY</a>
+                <!--END: CATEGORY_FORMAT-->
+                <ul class="subMenu">
+                <!--START: SUB_CATEGORY_FORMAT-->
+                  <li><a href="view_category.asp?cat=CATID" class="subcat">CATEGORY</a></li>
+                <!--END: SUB_CATEGORY_FORMAT-->
+                </ul>
+              </li>
+              <!--END: CATEGORIES--> 
+            </ul>
+            <!--END: FRAME_CATEGORY-->              
+            </nav>  
+            <div class="cart-container">
+              <div class="btn-group search-focus">
+                <span id="search-icon" class="icon-m icon-search2" title="Search"></span>
+                <!--START: FRAME_SEARCH-->
+                <div id="searchBox" class="hidden-mobile">
+                  <form method="get" name="searchForm" action="search.asp">
+                    <input type="text" id="searchlight" name="keyword" value="" placeholder="[frame_search]" />
+                    <button id="search_button" type="submit" name="search" value="">
+                      <i class="icon-m icon-search2"></i>
+                    </button>
+                  </form>                
+                </div>
+                <!--END: FRAME_SEARCH-->
+              </div>              
+              <a id="cart" href="view_cart.asp" class="hidden-mobile">
+                <img src="assets/templates/mixstore-html5/images/icon-cart.png" alt="icon-cart">
+                <span class="cart-title">My cart</span>
+                <span id="noItems">[ITEMSINCART]</span>
+                <span id="noItemsText">Item - </span>
+              </a> 
+            </div>
+                       
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+  </header>
+  <div class="container">
+    <div class="fluid-slider-container">
+    </div>
+  </div>
+  
+  <div class="fluid-breadcrumbs-container">
+  </div>
+  <main class="main-content" role="main">
+  <div class="container">
+    <div class="row flex-row">
+      <!--START: LEFT BAR-->
+      <aside id="leftBar" class="leftBar columns col-xs-12 col-md-3">
+        <div class="column" id="column1"> 
+          <!--START: LEFT_BAR_BLOCKS-->
+          <!--START: TOP_SELLERS_BLOCK-->
+          <div id="modTopSellers" class="module">
+            <span class="menu-headers">[frame_top-sellers]</span>
+            <div class="clear"></div>
+            <!--START: topsellers--> 
+            
+            <!--START: topsellers_topitem-->
+            <div class="topsellers_topitem">
+              <div class="top-sellers-star">[ranking]</div>
+              <div class="img"><a href="product.asp?itemid=[catalogid]" title="[name]"><img class="img-responsive" src="[thumbnail]" alt="[name]" /></a></div>
+              <div class="clear"></div>
+              <div class="info">
+                <div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
+                <div class="clear"></div>
+                <!--START: product_review--> 
+                <!--START: product_review_average-->
+                <div class="stars"><img src="assets/templates/common-html5/images/star[review_average].png" alt="Average Rating" /></div>
+                <!--END: product_review_average--> 
+                <!--END: product_review-->
+                <div class="price2"><!--START: ITEMPRICE--> 
+                  [ITEMPRICE] 
+                  <!--END: ITEMPRICE--> 
+                  <!--START: SALEPRICE--> 
+                  [ITEMSALEPRICE] 
+                  <!--END: SALEPRICE--></div>
+                <div class="clear"></div>              
+              </div>
+            </div>
+            <div class="clear"></div>
+            <!--END: topsellers_topitem--> 
+            
+          </div>
+          <!--END: TOP_SELLERS_BLOCK--> 
+          <!--START: NEW_RELEASES_BLOCK-->
+          <div id="modNewReleases" class="module block-sidebar">
+            <h5 class="menu-headers">[frame_new-releases]</h5>
+            <div class="block_content">
+              <!--START: newreleases-->              
+              <!--START: newreleases_item-->          
+              <div class="item">
+                <div class="img"><a href="product.asp?itemid=[catalogid]" title="[name]"><img class="img-responsive" src="[thumbnail]" alt="[name]" /></a></div>
+                <div class="info">                
+                  <div class="name"><a href="product.asp?itemid=[catalogid]" class="link">[name]</a></div>
+                  <div class="clear"></div>              
+                  <div class="price"><!--START: ITEMPRICE--> 
+                  [ITEMPRICE] 
+                  <!--END: ITEMPRICE--> 
+                  <!--START: SALEPRICE--> 
+                  <del class="price2">[ITEMSALEPRICE]</del> 
+                  <!--END: SALEPRICE--></div>
+                  <!--START: product_review--> 
+                  <!--START: product_review_average-->
+                  <div class="stars"><img src="assets/templates/common-html5/images/star[review_average].png" alt="Average Rating" /></div>
+                  <!--END: product_review_average--> 
+                  <!--END: product_review-->
+                  <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="div"></div>
+              <!--END: newreleases_item-->
+              <!--END: newreleases--> 
+            </div> 
+          </div>
+          <!--END: NEW_RELEASES_BLOCK--> 
+          <!--START: FRAME_BYPRICE-->
+          <div id="modPrice" class="module block-sidebar"> <span class="menu-headers">[frame_byprice]</span>
+            <div class="block_content">
+            <ul>
+              <!--START: byprice_format-->
+              <li><a href="search_groups.asp?keyword=[id]&byprice=[id]" class="cat">[title]</a></li>
+              <!--END: byprice_format-->
+            </ul>
+            </div>
+          </div>
+          <!--END: FRAME_BYPRICE-->
+          <!--START: LEFT_BANNER-->
+          <div id="leftBanner">[LEFT_BANNER]</div>
+          <!--END: LEFT_BANNER--> 
+          <!--END: LEFT_BAR_BLOCKS--> 
+        </div>
+      </aside>
+
+      <!--END: LEFT BAR-->
+      <div id="mainContent" class="columns col-xs-12 col-md-12">MIDDLE</div>
+      <!--START: RIGHT BAR-->
+      <aside id="rightBar" class="rightBar columns col-xs-12 col-md-3">
+        <div class="column" id="column2"> 
+          <!--START: RIGHT_BAR_BLOCKS--> 
+          <!--START: RIGHT_BANNER-->
+          <div id="rightBanner">[RIGHT_BANNER]</div>
+          <!--END: RIGHT_BANNER--> 
+          <!--END: RIGHT_BAR_BLOCKS--> 
+        </div>
+      </aside>
+      <!--END: RIGHT BAR-->
+      <div class="bottom-content columns col-xs-12 col-md-12">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9 hidden-xs">
+              <div class="block_content">   
+                  <div class="logo-ft">
+                    <img src="/assets/templates/mixstore-html5/images/shop_images_footer.png" alt="" class="img-responsive">
+                  </div>
+                  <div class="about hidden-sm">
+                    <p>we're confident we've provided all the best for you. stay connect with us</p>
+                  </div>
+              </div>   
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">    
+            <div class="social-icons">
+              <!--START: social_link_facebook--><a href="[social_link_facebook_url]" class="facebook" target="_blank" title="Like Us on Facebook"><i class="fa fa-facebook"></i></a><!--END: social_link_facebook-->
+              <!--START: social_link_twitter--><a href="[social_link_twitter_url]" class="twitter" target="_blank" title="Follow Us on Twitter"><i class="fa fa-twitter"></i></a><!--END: social_link_twitter-->
+              <!--START: social_link_googleplus--><a href="[social_link_googleplus_url]" class="gplus" target="_blank" title="Follow Us on Google+"><i class="fa fa-google-plus"></i></a><!--END: social_link_googleplus-->
+              <!--START: social_link_youTube--><a href="[social_link_youTube_url]" class="youtube" target="_blank" title="Subscribe to Our Channel"><i class="fa fa-youtube"></i></a><!--END: social_link_youTube-->
+              <!--START: social_link_pinterest--><a href="[social_link_pinterest_url]" class="pinterest" target="_blank" title="Follow Us on Pinterest"><i class="fa fa-pinterest"></i></a><!--END: social_link_pinterest-->
+              <!--START: social_link_instagram--><a href="[social_link_instagram_url]" class="instagram" target="_blank" title="Follow Us on Instagram"><i class="fa fa-instagram"></i></a><!--END: social_link_instagram-->
+              <!--START: social_link_tumblr--><a href="[social_link_tumblr_url]" class="tumblr" target="_blank" title="Follow Us on Tumblr"><i class="fa fa-tumblr"></i></a><!--END: social_link_tumblr-->
+              <!--START: social_link_blog--><a href="[social_link_blog_url]" class="blog" target="_blank" title="Subscribe to our Blog"><i class="fa fa-rss"></i></a><!--END: social_link_blog-->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+  <footer class="footer">
+    <div id="globalFooter">[GLOBAL_FOOTER]</div>
+    <div class="row flex-row footer_quicklink">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-12 col-xs-12">
+            <!--START: FRAME_MANUFACTURER-->
+            <div id="modManufacturer" class="modLinks">
+                <h3>[frame_manufacturer]</h3>
+                <ul>
+                  <!--START: manufacturer_format-->
+                  <li><a href="search_groups.asp?manf=[mfgid]" class="menu-bottom">[manufacturer]</a></li>
+                  <!--END: manufacturer_format-->
+                </ul>              
+            </div>
+            <!--END: FRAME_MANUFACTURER-->
+            <div class="block footer_contact modLinks">
+                <h3 class="footer-link">Contact Info</h3>
+              <div class="block_content" style="">
+                <ul class="footer_contact frame-links">
+                  <li>108 Sky Tower, Street name, AZ District, New York City, USA</li>
+                  <li>0123 456 78 / 0123 456 788</li>
+                  <li><a href="mailto:admin@gmail.com">contact@foxstore.com</a></li>
+                </ul>
+              </div>
+              <div class="view-map">
+                <a class="click-viewmap" href="#"><i class="fa fa-plus" aria-hidden="true"></i>View Map</a>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1izZ7J8Tbjl1ds5vwnuw62REuFdE" width="1170" height="480"></iframe>
+              </div>              
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-xs-12">
+            <!--START: FRAME_LINKS-->
+            <div id="modLinks" class="modLinks">
+                <h3 class="footer-link">[frame_links]</h3>
+                <ul class="frame-links">
+                  <!--START: LINKS--> 
+                  <!--START: LINK_FORMAT-->
+                  <li><a href="infopage.asp?page=[link_id]&extra=1" target="[link_target]" class="menu-bottom">[link_name]</a></li>
+                  <!--END: LINK_FORMAT--> 
+                  <!--END: LINKS-->
+                </ul>
+            </div>
+            <!--END: FRAME_LINKS--> 
+          </div>
+          <div class="col-md-2 col-sm-4 col-xs-12">
+            <div id="modLinks1" class="modLinks">
+              <h3 class="footer-link">Catalog</h3>
+              <ul class="frame-links">
+                <li>
+                  <a class="menu-bottom" href="/">Jeans</a>
+                </li>
+                <li>
+                  <a class="menu-bottom" href="/">Trousers</a>
+                </li>
+                <li>
+                  <a class="menu-bottom" href="/">Shirt</a>
+                </li>
+                <li>
+                  <a class="menu-bottom" href="/">Casual Shoes</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-xs-12">
+            <div id="modLinks2" class="modLinks">
+              <h3 class="footer-link">Information</h3>
+              <ul class="frame-links">
+                <li>
+                  <a class="menu-bottom" href="#">About us</a>
+                </li>
+                <li>
+                  <a class="menu-bottom" href="#">Contact us</a>
+                </li>
+                <li>
+                  <a class="menu-bottom" href="#">Terms & Conditions</a>
+                </li>
+                <li>
+                  <a class="menu-bottom" href="#">Faq</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-12 col-xs-12">
+            <!--START: FRAME_MAILLIST-->
+            <div id="mailistBox" >
+              <form class="modLinks" method="post" name="mailing" action="mailing_list.asp?action=add" onsubmit="return mailing_list();">
+                <h3 class="footer-link">[frame_mailinglist]</h3>
+                <div class="mailist-box frame-links"> 
+                  <p class="des_newsletter">
+                    Sign up to get exclusive offers from our favorite brands and to be well up in the news.
+                  </p>                 
+                  <div class="input-form ">
+                    <div class="input-group">
+                       <input type="text" name="email" value="" placeholder="Enter your email here" />
+                      <div class="btn-submit">
+                        <button type="submit" name="www" value="[mailinglist_button]" class="button_mini btn" >
+                          <i class="fa fa-angle-right icon-email"></i>
+                        </button>
+                      </div> 
+                    </div>
+                    <div class="box-radio">
+                      <input type="radio" name="subscribe" value="1" checked="checked" />
+                      <span class="menu-text">[mailinglist_subscribe]</span>
+                      <input type="radio" name="subscribe" value="0" />
+                      <span class="menu-text">[mailinglist_unsubscribe]</span>                
+                    </div>
+                    <div class="select-mailist">
+                      <span class="mailist-option-label active" data-mailist-option="subscribe">[mailinglist_subscribe]</span>
+                      <span class="mailist-option-label" data-mailist-option="unsubscribe">[mailinglist_unsubscribe]</span>
+                      <ul class="dropdown-menu">
+                          <li class="nav-item" data-mailist-option="subscribe">
+                              <a href="#" class="nav-link" data-mailist-option="subscribe">[mailinglist_subscribe]</a>
+                          </li>
+                          <li class="nav-item" data-mailist-option="unsubscribe">
+                              <a href="#" class="nav-link" data-mailist-option="unsubscribe">[mailinglist_unsubscribe]</a>
+                          </li>
+                      </ul>
+                    </div> 
+                  </div>
+                </div>
+              </form>
+              <div class="clear"></div>
+            </div>
+            <!--END: FRAME_MAILLIST-->
+          </div>
+        </div>
+      </div>
+    </div>      
+    <div class="footer-middle parallax hidden-sm hidden-xs" style="background-image:url(/assets/templates/mixstore-html5/images/bg-footerbottom.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="row-inner  clearfix">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+              <div class="custom info-services">
+                  <div class="info-title border small"> call the customer services</div>
+                  <div class="text-highlight"><strong> 1800 - 1570 - 000</strong></div>
+                  <div class=" border small"> Free 24/7 support for our customers</div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs12">
+              <div class="custom info-question">
+                  <div class="info-title border small"> email us your question</div>
+                  <div class="text-warning"><strong> support@mixstore.com</strong></div>
+                  <div class=" border small"> We will respond within 3 business days</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div id="copyright" class="footer row text-center">
+        [frame_copyright1]
+        <div class="paypal">
+          <img src="assets/templates/mixstore-html5/images/payment.png?" alt="Logo Payment" class="img-responsive">
+      </div>
+      </div>
+      <div class="clear"></div>
+  </footer>
+</div>
+<div class="popup-container modal-md" data-popupid="newsletter">
+  <div class="popup-wrapper">
+    <div class="popup-close"></div>
+    <div class="popup-content">
+      <h3 class="page-subheading">new letter</h3>
+      <div class="pnewle-message">Use code : <span>Bfyus</span> for 20% off free shipping on your first order</div>
+      <div class="pnewle-form">
+        <form method="post" name="mailing" action="mailing_list.asp?action=add" onsubmit="return mailing_list();">
+          <div class="mailist-box">                  
+            <div class="input-form">
+              <input type="text" name="email" value="" placeholder="Enter your email here" />
+              <div class="box-radio">
+                <input type="radio" name="subscribe" value="1" checked="checked" />
+                <span class="menu-text">[mailinglist_subscribe]</span>
+                <input type="radio" name="subscribe" value="0" />
+                <span class="menu-text">[mailinglist_unsubscribe]</span>                
+              </div>
+              <div class="select-mailist">
+                <span class="mailist-option-label active" data-mailist-option="subscribe">[mailinglist_subscribe]</span>
+                <span class="mailist-option-label" data-mailist-option="unsubscribe">[mailinglist_unsubscribe]</span>
+                <ul class="dropdown-menu">
+                    <li class="nav-item" data-mailist-option="subscribe">
+                        <a href="#" class="nav-link" data-mailist-option="subscribe">[mailinglist_subscribe]</a>
+                    </li>
+                    <li class="nav-item" data-mailist-option="unsubscribe">
+                        <a href="#" class="nav-link" data-mailist-option="unsubscribe">[mailinglist_unsubscribe]</a>
+                    </li>
+                </ul>
+              </div> 
+            </div>
+            <div class="btn-submit">
+              <input type="submit" name="www" value="[mailinglist_button]" />
+            </div>       
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popup-container" data-popupid="quickview">
+    <div class="popup-wrapper">
+        <div class="popup-close"></div>
+        <div class="popup-content"></div>
+    </div>
+</div>
+<div class="popup-container" data-popupid="review-popup">
+  <div class="popup-wrapper">
+      <div class="popup-close"></div>
+      <div class="popup-content"></div>
+  </div>
+</div>
+<div class="popup-container" data-popupid="email_friend-popup">
+  <div class="popup-wrapper">
+      <div class="popup-close"></div>
+      <div class="popup-content"></div>
+  </div>
+</div>
+<div class="popup-backdrop"></div>
+<!--START: quicksearch--> 
+<script type="text/javascript" src="assets/templates/common-html5/quicksearch/jquery.quicksearch.js"></script> 
+<script type="text/javascript">
+jQuery(function() {
+	jQuery('#searchlight').searchlight('/search_quick.asp');
+});
+</script> 
+<!--END: quicksearch--> 
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script type="text/javascript" src="assets/templates/[template]/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="assets/templates/[template]/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="assets/templates/[template]/js/iframeResizer.min.js"></script>
+<script type="text/javascript" src="assets/templates/[template]/js/functions.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+    jQuery('#search-icon').bind('click',function(e) {
+      if(jQuery(this).hasClass('active')){
+          jQuery('#searchBox').removeClass('open');
+          jQuery(this).removeClass('active');
+      }else{
+          jQuery(this).addClass('active');
+          jQuery('#searchBox').addClass('open');
+          jQuery('#searchBox input[type="text"]').focus();
+      }
+    });
+    jQuery('.on-sale').each(function(){      
+      jQuery(this).closest('.product-item').find(".img").append(jQuery(this));
+    });
+    jQuery('.subMenu').each(function(){
+      jQuery(this).closest('li').addClass('hasSubMenu');
+    });
+    jQuery('#desktopMenu').slicknav({
+        prependTo: '.top-menu .container',
+        label: '',
+        allowParentLinks: true,
+        closedSymbol: '',
+        openedSymbol: ''
+    });
+});
+
+</script>
+
+
+
+
+<script type="text/javascript">
+function chunk(arr, n) {
+    return arr.slice(0,(arr.length+n-1)/n|0).
+           map(function(c,i) { return arr.slice(n*i,n*i+n); });
+}
+       $(document).ready(function(){
+        var feed = new Instafeed({
+            get: "user",
+            accessToken: "3953969014.f7b7691.46d67fc2a0a34df9acc933cb236a49ed",
+            userId: 3953969014,
+            clientId: "",
+            limit: 32,
+            resolution: "low_resolution",
+            resolution2: "standard_resolution",
+            sortBy:"most-liked",
+            after: function() {
+            // CASE : 2,3 images in one column
+            var photos = [];
+            $("#instafeed img").each(function() {
+                photos.push( $(this).parent().prop('outerHTML'));
+            });
+            $("#instafeed").html('');
+            var itempercolumn = 2;
+
+            var photos = chunk(photos,itempercolumn);
+            var total_column = photos.length;
+
+            for (i = 0; i < total_column; i++)
+            {
+                var img_html = '<div class="item">';
+
+                for(j=0; j<photos[i].length; j++)
+                {
+                    img_html += '<div class="block-carousel-container">';
+                    img_html += '   <div class="left-block">';
+                    img_html += '       <div class="block-carousel-image-container image">';
+
+                    img_html += photos[i][j];
+
+                    img_html += '       </div>';
+                    img_html += '   </div>';
+                    img_html += '</div>';
+                }
+
+                $("#instafeed").html( $("#instafeed").html() + img_html );
+            }
+              var owl=$("#instafeed");
+                owl.owlCarousel({
+                items:4,
+                navigation : false,
+                pagination : false,
+                addClassActive :    true,
+                paginationNumbers : false,
+                itemsTablet: [768,3],
+                itemsTabletSmall: [650,3],
+               itemsMobile : [479,2]
+               });
+            }
+        });
+        feed.run();
+      });
+</script>
+<div class="stats"> 
+  <!--START: 3dcart stats--> 
+  <script type="text/javascript">
+
+var file='/stats/count.asp';
+
+var stats_d=new Date();
+var stats_s=stats_d.getSeconds();
+var stats_m=stats_d.getMinutes();
+var stats_x=stats_s*stats_m;
+var prdID = '[catalogid]';
+var catID = '[catid]';
+
+stats_f='' + escape(document.referrer); stats_f=stats_f.replace('_','----');
+if (navigator.appName=='Netscape'){stats_b='NS';}
+if (navigator.appName=='Microsoft Internet Explorer'){stats_b='MSIE';}
+if (navigator.appVersion.indexOf('MSIE 3')>0) {stats_b='MSIE';}
+stats_u='' + escape(document.URL); stats_u=stats_u.replace('_','----'); stats_w=screen.width; stats_h=screen.height;
+stats_v=navigator.appName;
+stats_fs = window.screen.fontSmoothingEnabled;
+if (stats_v != 'Netscape') {stats_c=screen.colorDepth;}
+else {stats_c=screen.pixelDepth;}
+stats_j=navigator.javaEnabled();
+info='w=' + stats_w + '&h=' + stats_h + '&c=' + stats_c + '&r=' + stats_f + '&u='+ stats_u + '&fs=' + stats_fs + '&b=' + stats_b + '&x=' + stats_x + '&cat=' + catID + '&prd=' + prdID;
+document.write('<img src="' + file + '?'+info+ '" width="1" height="1" border="0" alt="stats" />');
+
+</script>
+  <noscript>
+  <img src="/stats/count.asp" width="90" height="30" alt="" />
+  </noscript>
+  <!--END: 3dcart stats--> 
+</div>
+</body>
+</html>
